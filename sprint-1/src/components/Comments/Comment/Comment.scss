@@ -1,0 +1,39 @@
+@import '../../../sass/variables.scss';
+
+.Comment {
+    color: $black;
+
+    &__comment-container {
+        padding: 1rem 0;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 0.1rem solid $silver;
+    }
+
+    &__comment {
+        width: 80%
+    }
+
+    &__comment-user-image {
+        width: 3em;
+        height: 3rem;
+        background-color: $mercury;
+        border-radius: 100%;
+    }
+
+    &__name-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+    }
+
+    &__name {
+        font-size: 1.15rem;
+    }
+
+    &__date {
+        color: $silver
+    }
+}

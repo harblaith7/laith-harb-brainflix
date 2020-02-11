@@ -31,12 +31,15 @@ class Comments extends Component {
     }
 
     displayComments(){
-        this.state.comments.map(comment => {
-            return <Comment name={comment.name} date={comment.date} comment={comment.comment} />
+        let comments = this.state.comments.map(comment => {
+            return <Comment name={comment.name} date={comment.date} comment={comment.comment}/>
         })
+        return comments
     }
 
     render() {
+
+        console.log(this.displayComments())
         return (
             <div className="Comments">
                 <div className="Comments__container">
