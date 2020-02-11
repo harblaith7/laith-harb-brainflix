@@ -1,0 +1,61 @@
+@import "../../sass/variables.scss";
+
+.Video {
+
+    &__video-container {
+        position: relative;
+    }
+
+    &__video {
+        width: 100%;
+        padding-top: 1rem;
+        position: relative;
+    }
+
+    &__play-btn-container {
+        background-color: rgba(17, 17, 17, 0.76);
+        width: 3.75rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.4rem;
+        position: absolute;
+        bottom: 5%;
+        left: 5%
+    }
+    
+    &__play-btn {
+        width: 1.25rem;
+        margin-left: 0.2rem;
+    }
+
+    &__volume-container {
+        
+    }
+
+    &__volume-btn {
+        
+    }
+
+    &__play-progress-container {
+        background-color: yellow;
+        width: 47.5%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 5%;
+        left: 25%;
+        background-color: rgba(17, 17, 17, 0.76);
+        border-radius: 0.4rem;
+    }
+
+    &__play-progress{
+        height: 0.4rem;
+        width: 75%;
+        background-color: black;
+        border-radius: 100rem;
+    }
+}

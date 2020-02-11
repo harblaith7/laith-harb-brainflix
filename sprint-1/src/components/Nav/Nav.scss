@@ -1,0 +1,69 @@
+@import '../../sass/variables.scss';
+
+.Nav {
+    color: yellow;
+
+    &__logo-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+       padding: 1rem;
+       width: 13rem
+    }
+
+    &__search-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__search-input {
+        width: 90%;
+        padding: 1rem;
+        border: 0.1rem solid $mercury;
+        border-radius: 0.3rem;
+        color: $black;
+        font-size: 1.25rem;
+        transition: all 1s;
+
+        &:focus {
+            outline: none;
+            border: 0.1rem solid $black;
+        }
+    }
+
+    &__upload-container {
+        width: 90%;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__upload-btn {
+        padding: 1rem 4rem;
+        width: 75%;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: $brainflix-blue;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.20rem;
+        display: flex;
+        align-items: center;
+        
+        & span {
+            font-weight: 300;
+            font-size: 1.75rem;
+            margin-left: -1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__user-image {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+    }
+}
