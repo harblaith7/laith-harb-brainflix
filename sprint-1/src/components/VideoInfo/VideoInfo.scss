@@ -1,0 +1,37 @@
+@import '../../sass/variables.scss';
+
+.VideoInfo {
+
+    &__info-container {
+        width: 90%;
+        margin: 0 auto;
+        color: $black;
+        border-bottom: 0.1rem solid $silver
+    }
+
+    &__title {
+        font-size: 1.75rem;
+        font-weight: 900;
+        
+    }
+
+    &__author {
+        padding: 1rem 0 3rem 0;
+        font-size: 1.25rem;
+        
+    }
+
+    &__date {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $silver;
+        margin-left: 1rem;
+    }
+
+    &__description {
+        @extend .VideoInfo__info-container;
+        padding-top: 1rem;
+        border: none;
+        line-height: 1.35rem;
+    }
+}
