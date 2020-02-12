@@ -1,0 +1,28 @@
+@import '../../../sass/variables.scss';
+
+.VideoSection {
+    display: flex;
+    margin: 1rem 0;
+
+    &__video-image {
+        height: 6rem;
+        width: 10rem;
+        border-radius: 0.4rem;
+        margin-right: 0.5rem;
+    }
+
+    &__video-title {
+        color: $black
+    }
+
+    &__video-author {
+        margin-top: -0.5rem
+    }
+
+
+}
+
+/*
+
+
+    */

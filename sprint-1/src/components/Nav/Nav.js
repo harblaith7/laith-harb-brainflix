@@ -10,14 +10,15 @@ class Nav extends Component {
                 <div className="Nav__logo-container">
                     <img src={Logo} alt="" className="Nav__logo"/>
                 </div>
-                <div className="Nav__search-container">
-                    <input type="text" className="Nav__search-input" placeholder="Search"/>
+                <div className="Nav__to-right">
+                    <div className="Nav__search-container">
+                        <input type="text" className="Nav__search-input" placeholder="Search"/>
+                    </div>
+                    <div className="Nav__upload-container">
+                        <button className="Nav__upload-btn">+&nbsp;upload</button>
+                        <img src={UserImage} alt="" className="Nav__user-image"/>
+                    </div>
                 </div>
-                <div className="Nav__upload-container">
-                    <button className="Nav__upload-btn"> <span>+</span> upload</button>
-                    <img src={UserImage} alt="" className="Nav__user-image"/>
-                </div>
-
             </div>
         );
     }

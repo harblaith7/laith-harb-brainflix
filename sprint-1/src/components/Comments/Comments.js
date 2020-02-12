@@ -57,7 +57,7 @@ class Comments extends Component {
                 </div>
                 <div className="Comment-container">
                     {this.displayComments()}
-                    <Comment/>
+                    
                 </div>
             </div>
         );

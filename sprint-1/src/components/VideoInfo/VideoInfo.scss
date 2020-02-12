@@ -1,4 +1,5 @@
 @import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
 
 .VideoInfo {
 
@@ -34,4 +35,15 @@
         border: none;
         line-height: 1.35rem;
     }
+}
+
+
+@include width-768px {
+    .VideoInfo {
+        &__title {
+            font-size: 2.75rem;
+            padding-top: 2rem;
+        }
+    }
+   
 }
