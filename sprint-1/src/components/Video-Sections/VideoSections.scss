@@ -1,4 +1,5 @@
 @import '../../sass/variables.scss';
+@import "../../sass/mixins.scss";
 
 .VideoSections {
 
@@ -8,4 +9,17 @@
         display: flex;
         flex-direction: column;
     }
+}
+
+@include width-1000px {
+    .VideoSections {
+        &__containers {
+            padding-left: 1rem;
+            width: 100%;
+            
+            height: 100%;
+            
+        }
+    }
+   
 }

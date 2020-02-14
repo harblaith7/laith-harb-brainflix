@@ -1,0 +1,23 @@
+@import "./sass/mixins.scss";
+@import "./sass/variables.scss";
+
+
+
+@include width-1000px {
+    .App {
+        &__container {
+            
+            margin: 0 auto;
+        }
+        &__bottom-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        &__right-container {
+            border-left: 0.1rem solid $mercury;
+        }
+    }
+   
+}

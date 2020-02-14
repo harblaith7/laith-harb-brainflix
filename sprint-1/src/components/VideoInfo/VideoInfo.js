@@ -5,6 +5,7 @@ class VideoInfo extends Component {
     render() {
         return (
             <div className="VideoInfo">
+                <div className="VideoInfo__container">
                 <div className="VideoInfo__info-container">
                     <h3 className="VideoInfo__title">
                         BMX Rampage: 2018 Highlights
@@ -28,6 +29,7 @@ class VideoInfo extends Component {
                         who won the event for the second time -- eight years
                         after his first Red Cow Rampage title
                     </p>
+                </div>
                 </div>
             </div>
         );

@@ -10,7 +10,8 @@ class Video extends Component {
         return (
             <div className="Video">
                 <div className="Video__video-container">
-                    <video className="Video__video" src={VideoPlayer}></video>
+                    
+                    <video controls className="Video__video" src={VideoPlayer}></video>
                     <div className="Video__play-btn-container">
                         <img src={PlayButton} alt="" className="Video__play-btn"/>
                     </div>
