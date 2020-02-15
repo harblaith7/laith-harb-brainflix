@@ -8,7 +8,8 @@ import Video5 from './Images/video-list-5.jpg';
 import Video6 from './Images/video-list-6.jpg';
 import Video7 from './Images/video-list-7.jpg';
 import Video8 from './Images/video-list-8.jpg';
-import './VideoSections.scss'
+import './VideoSections.scss';
+import uuid from 'react-uuid'
 
 
 class VideoSections extends Component {
@@ -31,7 +32,7 @@ class VideoSections extends Component {
 
     displayVideos(){
         let allVideos = this.state.videos.map(video => {
-            return <VideoSection videoImage={video.videoImage} title={video.title} author={video.author}/>
+            return <VideoSection videoImage={video.videoImage} title={video.title} author={video.author} key={uuid()}/>
         })
         
         return allVideos
