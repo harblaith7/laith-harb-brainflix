@@ -41,7 +41,35 @@ class Comments extends Component {
 
         console.log(this.displayComments())
         return (
-            <div className="Comments">
+            <div className="Comment">
+                <div className="Comments__container">
+                    <h4 className="Comments__number-comments">3 Comments</h4>
+                    <div className="Comments__user-container">
+                        <img src={UserImage} alt="" className="Comments__user-image"/>
+                    <div className="Comments__input-container">
+                        <label htmlFor="textarea" className="Comments__label">Join the conversation</label>
+                        <textarea name="textarea" id="" row="100" className="Comments__textarea"></textarea>
+                    </div>
+                    <button className="Comments__comment-btn">
+                        Comment
+                    </button>
+                    </div>
+                </div>
+                
+
+                <div className="Comment-container">
+                    {this.displayComments()}
+                </div>
+            </div>
+        );
+    }
+}
+
+export default Comments;
+
+/* 
+
+<div className="Comments">
                 <div className="Comments__container">
                     <h4 className="Comments__number-comments">3 Comments</h4>
                     <div className="Comments__textarea-container">
@@ -64,8 +92,5 @@ class Comments extends Component {
                     
                 </div>
             </div>
-        );
-    }
-}
 
-export default Comments;
+            */
