@@ -46,13 +46,13 @@ class Comments extends Component {
                     <h4 className="Comments__number-comments">3 Comments</h4>
                     <div className="Comments__user-container">
                         <img src={UserImage} alt="" className="Comments__user-image"/>
-                    <div className="Comments__input-container">
-                        <label htmlFor="textarea" className="Comments__label">Join the conversation</label>
-                        <textarea name="textarea" id="" row="100" className="Comments__textarea"></textarea>
-                    </div>
-                    <button className="Comments__comment-btn">
-                        Comment
-                    </button>
+                        <div className="Comments__input-container">
+                            <label htmlFor="textarea" className="Comments__label">Join the conversation</label>
+                            <textarea name="textarea" id="" row="100" className="Comments__textarea"></textarea>
+                        </div>
+                        <button className="Comments__comment-btn">
+                            Comment
+                        </button>
                     </div>
                 </div>
                 

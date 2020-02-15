@@ -41,6 +41,7 @@ class VideoSections extends Component {
         
         return (
             <div className="VideoSections">
+                <h5 className="VideoSections__title">Next Videos</h5>
                 <div className="VideoSections__containers">
                     {this.displayVideos()}
                 </div>
