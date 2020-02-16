@@ -1,7 +1,9 @@
 @import "./sass/mixins.scss";
 @import "./sass/variables.scss";
 
-
+* {
+    font-family: 'Roboto';
+}
 
 @include width-1000px {
     .App {

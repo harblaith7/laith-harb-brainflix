@@ -13,8 +13,15 @@
         width: 100%;
         margin: 0 auto;
         color: $black;
-        border-bottom: 0.1rem solid $silver
+        border-bottom: 0.1rem solid $silver;
+        
     }
+
+    &__views-container{
+        display: flex;
+    }
+
+   
 
     &__title {
         font-size: 1.75rem;
@@ -22,17 +29,31 @@
         
     }
 
-    &__author {
+    &__author-container {
         padding: 1rem 0 3rem 0;
-        font-size: 1.25rem;
-        
+        display: flex;
+        align-items: center;
+    }
+
+    &__author {
+        font-size: 1.15rem;
     }
 
     &__date {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         font-weight: 400;
         color: $silver;
-        margin-left: 1rem;
+        margin-left: 0.75rem;
+    }
+
+    &__stats {
+        @extend .VideoInfo__date;
+        float: right;
+        margin-right: .25rem;
+        font-size: 0.9rem;
+        display: flex;
+        margin-top: .3rem;
+        
     }
 
     &__description {
@@ -41,7 +62,17 @@
         border: none;
         line-height: 1.35rem;
     }
+
+    &__stats-icon {
+        width: 1rem;
+        margin-right: 0.2rem;
+    }
+
+    &__stats-container {
+        margin-left: auto;
+    }
 }
+
 
 
 @include width-768px {
@@ -71,3 +102,19 @@
     }
    
 }
+
+@include width-600px {
+    .VideoInfo {
+        &__author-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        &__stats-container {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+        
+    }
+}
+
