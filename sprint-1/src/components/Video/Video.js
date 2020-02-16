@@ -12,12 +12,7 @@ class Video extends Component {
                 <div className="Video__video-container">
                     
                     <video controls className="Video__video" src={VideoPlayer}></video>
-                    <div className="Video__play-btn-container">
-                        <img src={PlayButton} alt="" className="Video__play-btn"/>
-                    </div>
-                    <div className="Video__play-progress-container">
-                        <div className="Video__play-progress"></div>
-                    </div>
+                    
                 </div>
                 
                 
