@@ -4,6 +4,11 @@ import ViewsIcon from './Icon-views.svg';
 import LikesIcon from './Icon-likes.svg'
 
 class VideoInfo extends Component {
+
+    componentDidMount(){
+        this.props.getTitle('BMX Rampage: 2018 Highlights')
+    }
+
     render() {
         return (
             <div className="VideoInfo">

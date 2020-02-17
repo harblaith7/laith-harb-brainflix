@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Nav from './components/Nav/Nav';
 import Video from './components/Video/Video';
 import VideoInfo from './components/VideoInfo/VideoInfo';
@@ -9,25 +9,42 @@ import './sass/styles.scss'
 
 
 
-function App() {
+class App extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      title : ""
+    }
+  }
+
+  getTitle = (title) => {
+    this.setState({
+      title : title
+    })
+  }
+
+  render(){
+
   return (
     <div className="App">
       <div className="App__container">
           <Nav/>
-          <Video/>
+          <Video />
          <div className="App__bottom-container">
           <div className="App__left-container">
-            <VideoInfo/>
+            <VideoInfo getTitle={this.getTitle}/>
             <Comments/>
           </div>
           <div className="App__right-container">
-            <VideoSections/>
+            <VideoSections currentVideoName = {this.state.title}/>
           </div>
          </div> 
         
       </div>
     </div>
   );
+}
 }
 
 export default App;

@@ -8,6 +8,7 @@ import Video5 from './Images/video-list-5.jpg';
 import Video6 from './Images/video-list-6.jpg';
 import Video7 from './Images/video-list-7.jpg';
 import Video8 from './Images/video-list-8.jpg';
+import Video9 from './Images/video-list-8.jpg';
 import './VideoSections.scss';
 import uuid from 'react-uuid'
 
@@ -25,15 +26,20 @@ class VideoSections extends Component {
                 {videoImage : Video5, title: "Take A Romantic Break In A Boutique Hote", author: "Ethan Owen"},
                 {videoImage : Video6, title: "Choose The Perfect Accommodations", author: "Lydia Perez"},
                 {videoImage : Video7, title: "Cruising Destination Ideas", author: "Timothy Austin"},
-                {videoImage : Video8, title: "Train Travel On Track For Safety", author: "Scotty Cranmer"}
+                {videoImage : Video8, title: "Train Travel On Track For Safety", author: "Scotty Cranmer"},
+                {videoImage : Video9, title: "BMX Rampage: 2018 Highlights", author: "Red Cow"}
             ]
         }
     }
 
     displayVideos(){
-        let allVideos = this.state.videos.map(video => {
+
+        let allVideos = this.state.videos.filter(video => {
+            return video.title !== this.props.currentVideoName
+        }).map(video => {
             return <VideoSection videoImage={video.videoImage} title={video.title} author={video.author} key={uuid()}/>
         })
+
         
         return allVideos
     }
