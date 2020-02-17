@@ -14,13 +14,20 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      title : ""
+      title : "",
+      comments : []
     }
   }
 
   getTitle = (title) => {
     this.setState({
       title : title
+    })
+  }
+
+  getComments = (comments) => {
+    this.setState({
+      comments : comments
     })
   }
 
@@ -33,8 +40,8 @@ class App extends Component {
           <Video />
          <div className="App__bottom-container">
           <div className="App__left-container">
-            <VideoInfo getTitle={this.getTitle}/>
-            <Comments/>
+            <VideoInfo getTitle={this.getTitle} getComments={this.getComments}/>
+            <Comments comments = {this.state.comments}/>
           </div>
           <div className="App__right-container">
             <VideoSections currentVideoName = {this.state.title}/>
