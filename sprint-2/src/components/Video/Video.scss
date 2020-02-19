@@ -1,0 +1,90 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.Video {
+
+    overflow-x: hidden;
+
+    &__video-container {
+        position: relative;
+        height: 100%;
+    }
+
+    &__video {
+        width: 100%;
+        height: 100%;
+      
+        position: relative;
+    }
+
+    &__play-btn-container {
+        background-color: rgba(17, 17, 17, 0.76);
+        width: 3.75rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.4rem;
+        position: absolute;
+        bottom: 5%;
+        left: 5%
+    }
+    
+    &__play-btn {
+        width: 1.25rem;
+        margin-left: 0.2rem;
+    }
+
+
+    &__play-progress-container {
+    
+        width: 45%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 5%;
+        left: 30%;
+        background-color: rgba(17, 17, 17, 0.76);
+        border-radius: 0.4rem;
+    }
+
+    &__play-progress{
+        height: 0.4rem;
+        width: 75%;
+        background-color: black;
+        border-radius: 100rem;
+    }
+}
+
+
+
+@include width-430px {
+    .Video {
+        &__play-progress-container {
+            width: 60%;
+            left: 20%
+        }
+    }
+   
+}
+
+@include width-1000px {
+    .Video {
+        background-color: black;
+
+        &__video-container {
+            margin: 0 auto;
+            width: 75%;
+            height: 90%;
+        }
+
+        &__video {
+            padding: 0
+        }
+        
+    }
+   
+}
+

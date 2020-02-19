@@ -1,0 +1,56 @@
+@import '../../../sass/variables.scss';
+@import "../../../sass/mixins.scss";
+
+.Comment {
+    color: $black;
+
+    &__comment-container {
+        padding: 1rem 0;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 0.1rem solid $mercury;
+    }
+
+    &__comment {
+        width: 80%;
+        margin-left: 1rem;
+    }
+
+    &__comment-user-image {
+        width: 3em;
+        height: 3rem;
+        background-color: $mercury;
+        border-radius: 100%;
+        
+    }
+
+    &__name-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0.75rem;
+        align-items: center;
+    }
+
+    &__name {
+        font-size: 1.15rem;
+        margin-right: 0.5rem;
+    }
+
+    &__date {
+        color: $silver
+    }
+}
+
+
+@include width-1000px {
+    .Comment {
+        
+        &__comment-container {
+            width: 100%
+        }
+        
+    }
+   
+}

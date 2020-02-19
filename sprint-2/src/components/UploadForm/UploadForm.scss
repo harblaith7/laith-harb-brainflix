@@ -1,0 +1,56 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.UploadForm {
+
+    margin-top: 2rem;
+
+    &__container {
+        width: 90%;
+        margin: 0 auto
+    }
+
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    &__btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    } 
+
+    &__label {
+        text-transform: uppercase;
+        color: $silver;
+        margin-bottom: 0.2rem;
+
+    }
+
+    &__input {
+        padding: 0.8rem;
+        border-radius: 0.2rem;
+        border: 0.1rem solid $mercury;
+        background-color: $alabaster;
+    }
+
+    &__btn {
+        padding: 1.2rem;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0.3rem;
+        font-weight: 400;
+        color: white;
+        font-size: 1.2rem;
+
+        &--upload {
+            background-color: $brainflix-blue
+        }
+
+        &--cancel {
+            background-color: white;
+            color: $black
+        }
+    }
+}

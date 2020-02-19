@@ -1,0 +1,33 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+
+
+.VideoThumbnail {
+    padding-top: 2rem;
+    border-top: 0.1rem solid $mercury;
+
+    &__title {
+        margin-bottom: 2rem;
+        margin-left: 5%;
+        color: $black;
+        font-size: 2rem;
+    }
+
+   &__container {
+       width: 90%;
+       margin: 0 auto
+   }
+
+    &__thumbnail-img {
+        width: 100%;
+        border-radius: 0.4rem;
+    }
+
+    &__description {
+        text-transform: uppercase;
+        color: $silver;
+        margin-bottom: 0.2rem;
+        letter-spacing: 0.05rem;
+    }
+}
