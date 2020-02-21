@@ -16,6 +16,12 @@
     }
 }
 
+@mixin width-min-600px {
+    @media (min-width: 600px){
+        @content;
+    }
+}
+
 @mixin width-768px {
     @media (min-width: 768px){
         @content;

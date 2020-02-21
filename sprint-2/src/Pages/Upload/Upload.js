@@ -7,7 +7,6 @@ export default class Upload extends Component {
     render() {
         return (
             <>
-                <Nav/>
                 <Thumbnail/>
                 <UploadForm/>
             </>

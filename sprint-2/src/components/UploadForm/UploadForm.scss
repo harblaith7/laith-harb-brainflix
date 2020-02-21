@@ -19,6 +19,7 @@
     &__btn {
         width: 100%;
         margin-bottom: 1rem;
+        cursor: pointer;
     } 
 
     &__label {
@@ -33,6 +34,10 @@
         border-radius: 0.2rem;
         border: 0.1rem solid $mercury;
         background-color: $alabaster;
+
+        &--textarea {
+            height: 10rem
+        }
     }
 
     &__btn {
@@ -54,3 +59,33 @@
         }
     }
 }
+
+@include width-min-600px {
+    .UploadForm {
+        
+
+        &__btn-container {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+            border-top: 0.1rem solid $mercury;
+            padding-top: 3rem;
+            margin-top: 4rem;
+        }
+
+        &__btn {
+            width: 15rem;
+            margin-left: 1rem;
+            
+
+            &--cancel {
+                color: $brainflix-blue;
+                font-weight: 900;
+            }
+
+        }
+    }
+}
+
+
+// bb5b8d57-5d03-4198-9a95-61ee9d08395f

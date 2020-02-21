@@ -31,3 +31,23 @@
         letter-spacing: 0.05rem;
     }
 }
+
+
+@include width-min-600px {
+    .VideoThumbnail {
+        border-top: none;
+
+        &__title {
+
+        }
+
+        &__container {
+            border-top: 0.15rem solid $mercury;
+            padding-top: 3rem;
+        }
+
+        &__thumbnail-img  {
+            width: 70%
+        }
+    }
+}

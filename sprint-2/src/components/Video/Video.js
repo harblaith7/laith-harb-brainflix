@@ -4,6 +4,7 @@ import VideoPlayer from './brainflix-video.mp4';
 import VolumeBtn from './Icon-volume.svg';
 import PlayButton from './Icon-play.svg';
 import Scrubber from './Icon-scrubber-control.svg'
+import VideoImage from './video-list-0.jpg'
 
 
 
@@ -13,7 +14,8 @@ class Video extends Component {
             <div className="Video">
                 <div className="Video__video-container">
 
-                    <video controls className="Video__video" src={VideoPlayer}></video>
+                    
+                    <video className="Video__video" poster={this.props.videoImage} src={this.props.videoImage} />
                     
                 </div>
                  

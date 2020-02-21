@@ -15,8 +15,11 @@ export default class UploadForm extends Component {
                             <label htmlFor="title" className="UploadForm__label">Add a video description</label>
                             <textarea type="text" name="title" className="UploadForm__input UploadForm__input--textarea"/>
                         </div>
-                        <input type="submit" className="UploadForm__btn UploadForm__btn--upload" value="publish"/>
-                        <input type="submit" className="UploadForm__btn UploadForm__btn--cancel" value="cancel"/>
+                        <div className="UploadForm__btn-container">
+                            <input type="submit" className="UploadForm__btn UploadForm__btn--upload" value="publish"/>
+                            <input type="submit" className="UploadForm__btn UploadForm__btn--cancel" value="cancel"/>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
