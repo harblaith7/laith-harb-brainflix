@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './VideoThumbnail.scss';
-import ThumbnailImage from './assets/Upload-video-preview.jpg'
+import ThumbnailImage from '../../assets/images/Upload-video-preview.jpg'
 
 class VideoThumbnail extends Component {
 
@@ -12,7 +12,6 @@ class VideoThumbnail extends Component {
                     <p className="VideoThumbnail__description">Video Thumbnail</p>
                     <img src={ThumbnailImage} alt="" className="VideoThumbnail__thumbnail-img"/>
                 </div>
-                
             </div>
         )
     }

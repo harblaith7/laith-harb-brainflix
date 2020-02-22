@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
 import VideoSection from './Video-Section/VideoSection'
-import Video1 from './Images/video-list-1.jpg';
-import Video2 from './Images/video-list-2.jpg';
-import Video3 from './Images/video-list-3.jpg';
-import Video4 from './Images/video-list-4.jpg';
-import Video5 from './Images/video-list-5.jpg';
-import Video6 from './Images/video-list-6.jpg';
-import Video7 from './Images/video-list-7.jpg';
-import Video8 from './Images/video-list-8.jpg';
-import Video9 from './Images/video-list-8.jpg';
 import './VideoSections.scss';
 import uuid from 'react-uuid';
-import axios from 'axios';
 
 
 

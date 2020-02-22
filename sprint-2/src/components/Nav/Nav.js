@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Logo from "./Logo-brainflix.svg";
-import UserImage from './Mohan-muruge.jpg';
-import SearchIcon from './Icon-search.svg';
+import Logo from "../../assets/Logo/Logo-brainflix.svg";
+import UserImage from '../../assets/images/Mohan-muruge.jpg';
 import {Link} from 'react-router-dom'
 import './Nav.scss'
 

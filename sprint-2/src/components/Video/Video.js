@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './Video.scss'
-import VideoPlayer from './brainflix-video.mp4';
-import VolumeBtn from './Icon-volume.svg';
-import PlayButton from './Icon-play.svg';
-import Scrubber from './Icon-scrubber-control.svg'
+import VolumeBtn from '../../assets/Icons/SVG/Icon-volume.svg';
+import PlayButton from '../../assets/Icons/SVG/Icon-play.svg';
+import Scrubber from '../../assets/Icons/SVG/Icon-scrubber-control.svg'
 import VideoImage from './video-list-0.jpg'
 
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Comments.scss';
 import Comment from './Comment/Comment'
-import UserImage from './Mohan-muruge.jpg';
+import UserImage from '../../assets/images/Mohan-muruge.jpg';
 import uuid from 'react-uuid';
 
 class Comments extends Component {

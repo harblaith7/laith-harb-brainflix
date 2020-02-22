@@ -1,36 +1,17 @@
 import React, { Component } from 'react';
 import './VideoInfo.scss';
-import ViewsIcon from './Icon-views.svg';
-import LikesIcon from './Icon-likes.svg'
+import ViewsIcon from '../../assets/Icons/SVG/Icon-views.svg';
+import LikesIcon from '../../assets/Icons/SVG/Icon-likes.svg'
 
 class VideoInfo extends Component {
 
     constructor(props){
         super(props)
-        this.state = {
-            comments : [
-                {
-                    name: "Micheal Lyons",
-                    date: this.dymanicDate('12/18/2018'),
-                    comment: "They BLEW the ROOF off at their last show, once everyone startedfiguring out they were going. This isstill simply the greatest opening of aconcert I have EVER witnessed."
-                },
-                {
-                    name: "Gary Wong",
-                    date: this.dymanicDate("12/18/2018"),
-                    comment: "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!"
-                },
-                {
-                    name: "Theodore Duncan",
-                    date: this.dymanicDate("11/15/2018"),
-                    comment: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
-                }
-            ]
-        }
-
+        
     }
 
     dymanicDate(date){
-        let timeInSeconds = (Date.now() - new Date('12/18/2018').getTime())/1000;
+        let timeInSeconds = (Date.now() - date)/1000;
 
         if(timeInSeconds < 60) {
             return 'Just now'
@@ -63,7 +44,7 @@ class VideoInfo extends Component {
                             <h6 className="VideoInfo__author">
                                 {channel}
                                 <span className="VideoInfo__date">
-                                    {timestamp}
+                                    {this.dymanicDate(timestamp)}
                                 </span>
                             </h6>
                             <div className="VideoInfo__stats-container">
