@@ -1,3 +1,9 @@
+@mixin width-400px {
+    @media (max-width: 400px){
+        @content;
+    }
+}
+
 @mixin width-430px {
     @media (min-width: 430px){
         @content;
@@ -6,6 +12,12 @@
 
 @mixin width-475px {
     @media (max-width: 475px){
+        @content;
+    }
+}
+
+@mixin width-550px {
+    @media (max-width: 550px){
         @content;
     }
 }
@@ -22,8 +34,20 @@
     }
 }
 
+@mixin width-min-650px {
+    @media (max-width: 650px){
+        @content;
+    }
+}
+
 @mixin width-768px {
     @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin width-max-768px {
+    @media (max-width: 768px){
         @content;
     }
 }
