@@ -58,6 +58,13 @@
     }
 }
 
+@mixin width-875px {
+    @media (min-width: 875px){
+        @content;
+    }
+}
+
+
 @mixin width-900px {
     @media (max-width: 900px){
         @content;
@@ -83,3 +90,18 @@
         @content;
     }
 }
+
+@mixin width-1200px {
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+
+
+@mixin width-1400px {
+    @media (min-width: 1400px){
+        @content;
+    }
+}
+
+

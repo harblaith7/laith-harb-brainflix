@@ -37,9 +37,7 @@
     .VideoThumbnail {
         border-top: none;
 
-        &__title {
-
-        }
+       
 
         &__container {
             border-top: 0.15rem solid $mercury;
@@ -48,6 +46,17 @@
 
         &__thumbnail-img  {
             width: 70%
+        }
+    }
+}
+
+
+
+@include width-875px {
+    .VideoThumbnail {
+        &__thumbnail-img {
+            width: 25rem;
+            border-radius: 0.4rem;
         }
     }
 }

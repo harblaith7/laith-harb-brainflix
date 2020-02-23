@@ -87,5 +87,48 @@
     }
 }
 
+@include width-1000px {
+    .UploadForm {
+
+        float: right;
+        margin-top: -15rem;
+        width: 100%;
+
+        &__input-container {
+            width: 55%;
+            margin-left: auto;
+        }
+
+        &__input {
+            &--textarea {
+                height: 7rem
+            }
+        }
+    }
+
+    
+}
+
+@include width-1200px {
+    .UploadForm {
+        &__input-container {
+            width: 62.5%;
+            margin-left: auto;
+        }
+    }
+
+}
+
+@include width-1400px {
+    .UploadForm {
+        &__input-container {
+            width: 67.5%;
+            margin-left: auto;
+        }
+    }
+
+}
+
+
 
 // bb5b8d57-5d03-4198-9a95-61ee9d08395f

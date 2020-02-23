@@ -4,7 +4,7 @@ import VolumeBtn from '../../assets/Icons/SVG/Icon-volume.svg';
 import PlayBtn from '../../assets/Icons/SVG/Icon-play.svg';
 import Pause from '../../assets/Icons/SVG/Icon-pause.svg';
 import FullScreen from '../../assets/Icons/SVG/Icon-fullscreen.svg'
-import VideoImage from './video-list-0.jpg'
+
 
 class Video extends Component {
     render() {

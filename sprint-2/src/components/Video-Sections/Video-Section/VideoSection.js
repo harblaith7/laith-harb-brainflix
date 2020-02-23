@@ -23,7 +23,7 @@ export default class VideoSection extends Component {
 
     render() {
         return (
-            <Link to={`/video/${this.props.id}`}>
+            <Link to={`/video/${this.props.id}`} className="VideoSection__link">
                 <div  className="VideoSection" ref={this.videoSectionRef} onClick={this.getId} id={this.props.id}>
                     <img className="VideoSection__video-image" src={this.props.videoImage} alt="" />
                     <div className="VideoSection__text-info">

@@ -5,6 +5,10 @@
     display: flex;
     margin: 1rem 0;
 
+    &__link {
+        text-decoration: none;
+    }
+
     &__video-image {
         height: 6rem;
         width: 10rem;
@@ -18,7 +22,8 @@
     }
 
     &__video-author {
-        margin-top: -0.5rem
+        margin-top: -0.5rem;
+        color: $silver
     }
 
 
