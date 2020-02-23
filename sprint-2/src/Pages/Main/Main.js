@@ -7,8 +7,6 @@ import VideoSections from '../../components/Video-Sections/VideoSections';
 import './Main.scss';
 import axios from 'axios';
 
-
-
 class Main extends Component {
 
   constructor(props){
@@ -21,7 +19,19 @@ class Main extends Component {
       showMainVideo: false,
       currentVideoId : ""
     }
-    this.getVideoId = this.getVideoId.bind(this)
+  }
+
+  getCurrentVideo = (id) => {
+    axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`)
+          .then(response => {
+            this.setState({
+              currentVideo : response.data,
+              comments: response.data.comments
+            })
+          })
+          .catch(error => {
+            console.log(error)
+          })
   }
 
   componentDidMount(){
@@ -31,57 +41,27 @@ class Main extends Component {
 
     axios.get(`${api_url}/videos?api_key=${api_key}`)
         .then(response => {
-            
             this.setState({
                 videos : response.data
             }, () => {
-              axios.get(`https://project-2-api.herokuapp.com/videos/${this.state.videos[0].id}?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`)
-        .then(response => {
-    
-          this.setState({
-            currentVideo : response.data,
-            comments: response.data.comments
-          })
-        })
+              this.getCurrentVideo(this.state.videos[0].id)
             })
         }).catch(error => {
             console.log(error)
         })
-        
-        
-
-      
   }
 
   componentDidUpdate(prevProps, prevState){
 
     if(prevProps.match.params.id !== this.props.match.params.id){
-      
-  
+
         if(this.props.match.params.id){
-          axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`)
-          .then(response => {
-
-            this.setState({
-              currentVideo : response.data,
-              comments: response.data.comments
-            })
-          })
+          this.getCurrentVideo(this.props.match.params.id)
         } else {
-
-          axios.get(`https://project-2-api.herokuapp.com/videos/${this.state.videos[0].id}?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`)
-        .then(response => {
-    
-          this.setState({
-            currentVideo : response.data,
-            comments: response.data.comments
-          })
-        })
+          this.getCurrentVideo(this.state.videos[0].id)
         }
-      
     }
     
-    console.log('Mine',this.props.match.params.id)
     if(prevState.currentVideo !== this.state.currentVideo){
       window.scrollTo({
         top: 0,
@@ -91,25 +71,6 @@ class Main extends Component {
     }
   }
 
-  
-
-  getVideoId(id){
-   
-     
-       
-    }
-    
-    
-
-  getTitle = (title) => {
-    this.setState({
-      title : title
-    })
-  }
-
-  getComments = (comments) => {
-    console.log(comments)
-  }
 
   render(){
     return (

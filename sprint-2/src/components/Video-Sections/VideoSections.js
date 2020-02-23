@@ -10,12 +10,10 @@ class VideoSections extends Component {
 
     constructor(props){
         super(props)
-        this.getId = this.getId.bind(this)
+      
     }
 
-    getId(id){
-        this.props.transferId(id)
-    }
+    
 
 
     displayVideos(){
@@ -23,7 +21,7 @@ class VideoSections extends Component {
         let allVideos = this.props.videos.filter(video => {
             return video.title !== this.props.currentVideoName
         }).map(video => {
-            return <VideoSection videoImage={video.image} title={video.title} author={video.channel} id = {video.id} key={uuid()} transferId={this.getId}/>
+            return <VideoSection videoImage={video.image} title={video.title} author={video.channel} id = {video.id} key={uuid()} />
         })
 
         
