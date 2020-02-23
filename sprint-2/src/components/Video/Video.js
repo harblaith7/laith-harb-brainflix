@@ -11,8 +11,7 @@ class Video extends Component {
         return (
             <div className="Video">
                 <div className="Video__video-container">
-                
-                    <video className="Video__video" poster={this.props.videoImage} src={this.props.videoImage}/>
+                    <img className="Video__video" poster={this.props.videoImage} src={this.props.videoImage}/>
                     <div className="Video__icon-container">
                         <img src={PlayBtn} alt="" className="Video__icon"/>
                     </div>
@@ -23,7 +22,6 @@ class Video extends Component {
                          <img src={FullScreen} alt="" className="Video__icon"/>
                         <img src={VolumeBtn} alt="" className="Video__icon"/>
                     </div>
-                    
                 </div>
                  
             </div>
@@ -32,3 +30,19 @@ class Video extends Component {
 }
 
 export default Video;
+
+
+/* 
+
+                    <div className="Video__icon-container">
+                        <img src={PlayBtn} alt="" className="Video__icon"/>
+                    </div>
+                    <div className="Video__icon-container Video__icon-container--scrubber">
+                        <div className="Video__icon Video__icon--scrubber"></div>
+                    </div>
+                    <div className="Video__icon-container Video__icon-container--two">
+                         <img src={FullScreen} alt="" className="Video__icon"/>
+                        <img src={VolumeBtn} alt="" className="Video__icon"/>
+                    </div>
+
+                    */
