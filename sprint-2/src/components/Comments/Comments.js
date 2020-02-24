@@ -6,11 +6,24 @@ import uuid from 'react-uuid';
 
 class Comments extends Component {
 
+    constructor(props){
+        super(props)
+        this.textareaRef = React.createRef()
+    }
+
     displayComments(){
         let comments = this.props.comments.map(comment => {
             return <Comment name={comment.name} date={comment.date} comment={comment.comment} key={uuid()}/>
         })
         return comments
+    }
+
+    addComment = (e) => {
+
+        //this.props.transferComments(this.textareaRef.current.value)
+
+        e.preventDefault()
+
     }
 
     render() {
@@ -19,16 +32,17 @@ class Comments extends Component {
             <div className="Comment">
                 <div className="Comments__container">
                     <h4 className="Comments__number-comments">3 Comments</h4>
-                    <div className="Comments__user-container">
+                    <form className="Comments__user-container" onSubmit = {this.addComment}>
                         <img src={UserImage} alt="" className="Comments__user-image"/>
                         <div className="Comments__input-container">
                             <label htmlFor="textarea" className="Comments__label">Join the conversation</label>
-                            <textarea name="textarea" id="" row="100" className="Comments__textarea"></textarea>
+                            <textarea name="textarea" id="" row="100" className="Comments__textarea" required ref={this.textareaRef}></textarea>
                         </div>
                         <button className="Comments__comment-btn">
                             Comment
                         </button>
-                    </div>
+                        
+                    </form>
                 </div>
                 
 

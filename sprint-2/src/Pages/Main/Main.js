@@ -6,6 +6,7 @@ import Comments from '../../components/Comments/Comments';
 import VideoSections from '../../components/Video-Sections/VideoSections';
 import './Main.scss';
 import axios from 'axios';
+import uuid from 'uuid'
 
 class Main extends Component {
 
@@ -17,9 +18,29 @@ class Main extends Component {
       videos : [],
       currentVideo : {},
       showMainVideo: false,
-      currentVideoId : ""
+      currentVideoId : "",
+      newComment: ""
     }
   }
+
+  /*
+  getNewComment = (comment) => {
+    
+    axios.post(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/comments?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`, {
+      name: "Laith",
+      comment,
+      id: uuid(),
+      likes: 0,
+      timestamp: 1545162149000
+    })
+    
+
+    this.setState({
+      newComment : comment
+    })
+  }
+
+  */
 
   getCurrentVideo = (id) => {
     axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`)
@@ -82,7 +103,7 @@ class Main extends Component {
               <VideoInfo 
                 currentVideo={this.state.currentVideo}
               />
-              <Comments comments = {this.state.comments}/>
+              <Comments comments = {this.state.comments} transferComments = {this.getNewComment}/>
             </div>
             <div className="App__right-container">
               <VideoSections currentVideoName = {this.state.currentVideo.title} videos={this.state.videos} transferId={this.getVideoId}/>
