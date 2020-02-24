@@ -23,15 +23,23 @@ class Main extends Component {
     }
   }
 
-  /*
+  
   getNewComment = (comment) => {
     
     axios.post(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/comments?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`, {
-      name: "Laith",
       comment,
-      id: uuid(),
-      likes: 0,
-      timestamp: 1545162149000
+      name: 'Laith Harb'
+    }).then(({data}) => {
+      console.log(data)
+      this.setState({
+        comments : [ {
+          comment: data.comment,
+          id: data.id,
+          likes: data.likes,
+          name: data.name,
+          timestamp: data.timestamp
+        }, ...this.state.comments]
+      })
     })
     
 
@@ -40,7 +48,7 @@ class Main extends Component {
     })
   }
 
-  */
+  
 
   getCurrentVideo = (id) => {
     axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`)

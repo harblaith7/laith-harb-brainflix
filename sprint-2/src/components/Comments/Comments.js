@@ -20,8 +20,8 @@ class Comments extends Component {
 
     addComment = (e) => {
 
-        //this.props.transferComments(this.textareaRef.current.value)
-
+        this.props.transferComments(this.textareaRef.current.value)
+        this.textareaRef.current.value = ""
         e.preventDefault()
 
     }
