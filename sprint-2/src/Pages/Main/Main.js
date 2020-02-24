@@ -48,7 +48,11 @@ class Main extends Component {
     })
   }
 
-  
+  sortedComments = () => {
+    return this.state.comments.sort(function(a,b){
+      return  b.timestamp - a.timestamp 
+    })
+  }
 
   getCurrentVideo = (id) => {
     axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`)
@@ -111,7 +115,7 @@ class Main extends Component {
               <VideoInfo 
                 currentVideo={this.state.currentVideo}
               />
-              <Comments comments = {this.state.comments} transferComments = {this.getNewComment}/>
+              <Comments comments = {this.sortedComments()} transferComments = {this.getNewComment}/>
             </div>
             <div className="App__right-container">
               <VideoSections currentVideoName = {this.state.currentVideo.title} videos={this.state.videos} transferId={this.getVideoId}/>
