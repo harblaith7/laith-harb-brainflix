@@ -1,5 +1,7 @@
 const express = require('express')
+const fs = require('fs')
 const router = express.Router()
+const path = require('path')
 
 const videos = [
     {
@@ -58,8 +60,10 @@ const videos = [
     }
 ]
 
+//fs.writeFileSync('./data.json', JSON.stringify(videos))
+
 router.get('/', (req, res) => {
-    res.json(videos)
+    res.sendFile(path.join(__dirname, '../data.json'))
 })
 
 router.get('/:id', (req, res) => {

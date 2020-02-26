@@ -70,9 +70,10 @@ class Main extends Component {
   componentDidMount(){
 
     let api_key = 'bb5b8d57-5d03-4198-9a95-61ee9d08395f';
-    let api_url = 'https://project-2-api.herokuapp.com'
+    let api_url = 'https://project-2-api.herokuapp.com';
 
-    axios.get(`${api_url}/videos?api_key=${api_key}`)
+    axios.get(`/video`)
+    //
         .then(response => {
             this.setState({
                 videos : response.data
