@@ -25,12 +25,12 @@ class Main extends Component {
 
   
   getNewComment = (comment) => {
-    
+    //video/${this.props.match.params.id}/comments
     axios.post(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/comments?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`, {
       comment,
       name: 'Laith Harb'
     }).then(({data}) => {
-      console.log(data)
+      
       this.setState({
         comments : [ {
           comment: data.comment,
@@ -55,11 +55,14 @@ class Main extends Component {
   }
 
   getCurrentVideo = (id) => {
-    axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=$bb5b8d57-5d03-4198-9a95-61ee9d08395f`)
+
+    
+
+    axios.get(`/video/${id}`)
           .then(response => {
             this.setState({
-              currentVideo : response.data,
-              comments: response.data.comments
+              currentVideo : response.data[0],
+              comments: response.data[0].comments
             })
           })
           .catch(error => {
@@ -73,7 +76,6 @@ class Main extends Component {
     let api_url = 'https://project-2-api.herokuapp.com';
 
     axios.get(`/video`)
-    //
         .then(response => {
             this.setState({
                 videos : response.data

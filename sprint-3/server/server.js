@@ -1,10 +1,15 @@
 const express = require('express')
 const path = require('path')
+const bodyParser = require('body-parser')
 
 const app = express()
 
 //app.use(express.json())
 //app.use(express.urlencoded({extended: false}))
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}))
 
 
 const middlewareTest = () => {
