@@ -4,8 +4,6 @@ import './VideoSections.scss';
 import uuid from 'react-uuid';
 
 
-
-
 class VideoSections extends Component {
 
     constructor(props){
@@ -16,13 +14,11 @@ class VideoSections extends Component {
     
     displayVideos(){
 
-        let allVideos = this.props.videos.filter(video => {
-            return video.title !== this.props.currentVideoName
-        }).map(video => {
+        return this.props.videos.map(video => {
             return <VideoSection videoImage={video.image} title={video.title} author={video.channel} id = {video.id} key={uuid()} />
         })
 
-        return allVideos
+        
     }
 
     render() {

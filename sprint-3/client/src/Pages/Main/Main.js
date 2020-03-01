@@ -68,6 +68,12 @@ class Main extends Component {
           })
   }
 
+  filterVideos = () => {
+    return this.state.videos.filter(video => {
+      return video.title !== this.state.currentVideo.title
+    })
+  }
+
   componentDidMount(){
     axios.get(`/video`)
         .then(response => {
@@ -115,7 +121,7 @@ class Main extends Component {
               <Comments comments = {this.sortedComments()} transferComments = {this.getNewComment}/>
             </div>
             <div className="App__right-container">
-              <VideoSections currentVideoName = {this.state.currentVideo.title} videos={this.state.videos} transferId={this.getVideoId}/>
+              <VideoSections videos={this.filterVideos()} transferId={this.getVideoId}/>
             </div>
           </div> 
           
