@@ -36,7 +36,15 @@ class Comments extends Component {
                         <img src={UserImage} alt="" className="Comments__user-image"/>
                         <div className="Comments__input-container">
                             <label htmlFor="textarea" className="Comments__label">Join the conversation</label>
-                            <textarea name="textarea" id="" row="100" className="Comments__textarea" required ref={this.textareaRef}></textarea>
+                            <textarea 
+                                name="textarea" 
+                                id="" 
+                                row="100" 
+                                className="Comments__textarea" 
+                                required ref={this.textareaRef} 
+                                placeholder="Write a comment here"
+                            />
+                            
                         </div>
                         <button className="Comments__comment-btn">
                             Comment
