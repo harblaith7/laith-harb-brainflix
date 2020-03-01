@@ -3,17 +3,11 @@ import './VideoSection.scss';
 import {Link} from 'react-router-dom';
 
 
-
-
-
-
 export default class VideoSection extends Component {
 
     constructor(props){
         super(props)
         this.videoSectionRef = React.createRef()
-   
-        
     }
 
   
@@ -34,10 +28,3 @@ export default class VideoSection extends Component {
 }
 
 
-/*
-
-const getId = (e) => {
-        console.log(e.target.id)
-    }
-
-    */

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import VideoSection from './VideoSection/VideoSection'
+import VideoSection from '../VideoSection/VideoSection'
 import './VideoSections.scss';
 import uuid from 'react-uuid';
 
