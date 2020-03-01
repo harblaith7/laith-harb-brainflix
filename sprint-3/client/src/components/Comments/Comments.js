@@ -44,12 +44,10 @@ class Comments extends Component {
                                 required ref={this.textareaRef} 
                                 placeholder="Write a comment here"
                             />
-                            
                         </div>
                         <button className="Comments__comment-btn">
                             Comment
                         </button>
-                        
                     </form>
                 </div>
                 
