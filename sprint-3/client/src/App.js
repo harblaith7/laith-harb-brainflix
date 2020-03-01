@@ -28,6 +28,7 @@ export default class App extends Component {
         <Route path="/upload" component={Upload} />
         <Route path="/video/:id" component={Main}/>
         <Route path="/video" component={Main} />
+        <Route path="/" component={Main} />
       </Switch>
      
     </>

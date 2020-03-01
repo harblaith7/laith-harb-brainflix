@@ -14,8 +14,6 @@ class VideoSections extends Component {
     }
 
     
-
-
     displayVideos(){
 
         let allVideos = this.props.videos.filter(video => {
@@ -24,7 +22,6 @@ class VideoSections extends Component {
             return <VideoSection videoImage={video.image} title={video.title} author={video.channel} id = {video.id} key={uuid()} />
         })
 
-        
         return allVideos
     }
 

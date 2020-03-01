@@ -54,10 +54,8 @@ class Main extends Component {
     })
   }
 
+  // FOR MY AXIOS CALLS I AM USING A PROXY (CHECK MY PACKAGE.JSON FILE) SO I DIDN'T PUT LOCALHOST... INTO MY URL //
   getCurrentVideo = (id) => {
-
-    
-
     axios.get(`/video/${id}`)
           .then(response => {
             this.setState({
@@ -71,10 +69,6 @@ class Main extends Component {
   }
 
   componentDidMount(){
-
-    let api_key = 'bb5b8d57-5d03-4198-9a95-61ee9d08395f';
-    let api_url = 'https://project-2-api.herokuapp.com';
-
     axios.get(`/video`)
         .then(response => {
             this.setState({

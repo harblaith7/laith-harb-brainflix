@@ -10,6 +10,7 @@ export default class UploadForm extends Component {
             title: "",
             description: ""
         }
+        
     }
 
     changeInputState = (e) => {
@@ -19,7 +20,15 @@ export default class UploadForm extends Component {
         })
     }
 
+    clearInputField = () => {
+        this.setState({
+            title: "",
+            description: ""
+        })
+    }
+
     postVideo = (e) => {
+        
         e.preventDefault()
         
         axios.post('video/upload', {
@@ -33,12 +42,8 @@ export default class UploadForm extends Component {
             console.log(error)
         })
 
-        this.setState({
-            title: "",
-            description: ""
-        })
+        this.clearInputField()
 
-        
     }
 
     render() {
@@ -54,6 +59,8 @@ export default class UploadForm extends Component {
                                 className="UploadForm__input"
                                 onChange={this.changeInputState}
                                 value={this.state.title}
+                                required
+                                placeholder="Add a title to your video"
                             />
                         </div>
                         <div className="UploadForm__input-container">
@@ -64,11 +71,23 @@ export default class UploadForm extends Component {
                                 className="UploadForm__input UploadForm__input--textarea"
                                 onChange={this.changeInputState}
                                 value={this.state.description}
+                                required
+                                placeholder="Add a description of your video"
                             />
                         </div>
                         <div className="UploadForm__btn-container">
-                            <input type="submit" className="UploadForm__btn UploadForm__btn--upload" value="publish"/>
-                            <input type="submit" className="UploadForm__btn UploadForm__btn--cancel" value="cancel"/>
+                            <input 
+                                type="submit" 
+                                className="UploadForm__btn UploadForm__btn--upload" 
+                                id="submitBtn" 
+                                value="publish"/>
+                            <input 
+                                type="button" 
+                                className="UploadForm__btn UploadForm__btn--cancel" 
+                                id="cancelBtn" 
+                                value="cancel"
+                                onClick = {this.clearInputField}
+                                />
                         </div>
                         
                     </form>

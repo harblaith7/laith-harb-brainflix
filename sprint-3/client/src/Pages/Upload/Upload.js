@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../../components/Nav/Nav';
-import Thumbnail from '../../components/VideoThumbnail/VideoThumnail';
+import Thumbnail from '../../components/VideoThumbnail/VideoThumbnail';
 import UploadForm from '../../components/UploadForm/UploadForm';
 import './Upload.scss'
 
